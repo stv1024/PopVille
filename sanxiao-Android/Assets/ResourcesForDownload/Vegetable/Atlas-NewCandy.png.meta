@@ -1,0 +1,839 @@
+fileFormatVersion: 2
+guid: 8a1aada8085c7da4c95fb2ed7d3f7caf
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas-NewCandy_0
+    21300002: Atlas-NewCandy_1
+    21300004: Atlas-NewCandy_2
+    21300006: Atlas-NewCandy_3
+    21300008: Atlas-NewCandy_4
+    21300010: Atlas-NewCandy_5
+    21300012: Atlas-NewCandy_6
+    21300014: Atlas-NewCandy_7
+    21300016: Atlas-NewCandy_8
+    21300018: Atlas-NewCandy_9
+    21300020: Atlas-NewCandy_10
+    21300022: Atlas-NewCandy_11
+    21300024: Atlas-NewCandy_12
+    21300026: Atlas-NewCandy_13
+    21300028: Atlas-NewCandy_14
+    21300030: Atlas-NewCandy_15
+    21300032: Atlas-NewCandy_16
+    21300034: Atlas-NewCandy_17
+    21300036: Atlas-NewCandy_18
+    21300038: Atlas-NewCandy_19
+    21300040: Atlas-NewCandy_20
+    21300042: Atlas-NewCandy_21
+    21300044: Atlas-NewCandy_22
+    21300046: Atlas-NewCandy_23
+    21300048: Atlas-NewCandy_24
+    21300050: Atlas-NewCandy_25
+    21300052: Atlas-NewCandy_26
+    21300054: Atlas-NewCandy_27
+    21300056: Atlas-NewCandy_28
+    21300058: Atlas-NewCandy_29
+    21300060: Atlas-NewCandy_30
+    21300062: Atlas-NewCandy_31
+    21300064: Atlas-NewCandy_32
+    21300066: Atlas-NewCandy_33
+    21300068: Atlas-NewCandy_34
+    21300070: Atlas-NewCandy_35
+    21300072: Atlas-NewCandy_36
+    21300074: Atlas-NewCandy_37
+    21300076: Atlas-NewCandy_38
+    21300078: Atlas-NewCandy_39
+    21300080: Atlas-NewCandy_40
+    21300082: Atlas-NewCandy_41
+    21300084: Atlas-NewCandy_42
+    21300086: Atlas-NewCandy_43
+    21300088: Atlas-NewCandy_44
+    21300090: Atlas-NewCandy_45
+    21300092: Atlas-NewCandy_46
+    21300094: Atlas-NewCandy_47
+    21300096: Atlas-NewCandy_48
+    21300098: Atlas-NewCandy_49
+    21300100: Atlas-NewCandy_50
+    21300102: Atlas-NewCandy_51
+    21300104: Atlas-NewCandy_52
+    21300106: Atlas-NewCandy_53
+    21300108: Atlas-NewCandy_54
+    21300110: Atlas-NewCandy_55
+    21300112: Atlas-NewCandy_56
+    21300114: Atlas-NewCandy_57
+    21300116: Atlas-NewCandy_58
+    21300118: Atlas-NewCandy_59
+    21300120: Atlas-NewCandy_60
+    21300122: Atlas-NewCandy_61
+    21300124: Atlas-NewCandy_62
+    21300126: Atlas-NewCandy_63
+    21300128: Atlas-NewCandy_64
+    21300130: Atlas-NewCandy_65
+    21300132: Atlas-NewCandy_66
+    21300134: Atlas-NewCandy_67
+    21300136: Atlas-NewCandy_68
+    21300138: Atlas-NewCandy_69
+    21300140: Atlas-NewCandy_70
+    21300142: Atlas-NewCandy_71
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Atlas-NewCandy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 953
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 1000
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1000
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 975
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_4
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 975
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 950
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 950
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 923
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_8
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 923
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 898
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_10
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 856
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 881
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 809
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_13
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 856
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_14
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 831
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_15
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 831
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 737
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_18
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_19
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_20
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 784
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 759
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_22
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 759
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_23
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 953
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_24
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1000
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_25
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 1000
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_26
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 975
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_27
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 975
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_28
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 881
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_29
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 950
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_30
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 950
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_31
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 923
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_32
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 923
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_33
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 898
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_34
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 898
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_35
+      rect:
+        serializedVersion: 2
+        x: 130
+        y: 809
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_36
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 856
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_37
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 856
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_38
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 831
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_39
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 831
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 665
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_41
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 665
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 593
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_43
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 593
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 521
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_45
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 521
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 449
+        width: 84
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_47
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 711
+        width: 156
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_48
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 548
+        width: 91
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_49
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 856
+        width: 132
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_50
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 275
+        width: 137
+        height: 172
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_51
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 135
+        width: 166
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_52
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 8
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_53
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 25
+        width: 130
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_54
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 415
+        width: 106
+        height: 107
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_55
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 605
+        width: 91
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_56
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 494
+        width: 113
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_57
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 465
+        width: 137
+        height: 176
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_58
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 366
+        width: 115
+        height: 113
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_59
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 326
+        width: 139
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_60
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 185
+        width: 137
+        height: 168
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_61
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 305
+        width: 130
+        height: 112
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_62
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 159
+        width: 141
+        height: 128
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_63
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 54
+        width: 113
+        height: 105
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_64
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 63
+        width: 106
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_65
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 985
+        width: 66
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_66
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 957
+        width: 56
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_67
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 927
+        width: 69
+        height: 24
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_68
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 864
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_69
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 820
+        width: 63
+        height: 42
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_70
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 744
+        width: 55
+        height: 71
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-NewCandy_71
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 821
+        width: 33
+        height: 20
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

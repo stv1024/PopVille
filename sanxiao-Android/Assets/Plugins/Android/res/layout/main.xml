@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+    <Button
+            android:id="@+id/bind_sina_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="绑定新浪微博"/>
+    <Button
+            android:id="@+id/bind_tecent_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="绑定腾讯微博"/>
+
+    <Button android:id="@+id/push_btn"
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:text="push init"/>
+
+    <Button android:id="@+id/umeng_feedback_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="友盟用户反馈"/>
+
+    <Button android:id="@+id/share_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="分享"/>
+
+
+    <Button android:id="@+id/event_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="自定义事件"/>
+</LinearLayout>
+

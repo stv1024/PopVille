@@ -1,0 +1,284 @@
+package com.morln.game.newvs;
+
+import "common.proto";
+
+option java_package = "com.morln.game.newvs.command";
+option java_outer_classname = "Game";
+option optimize_for = SPEED;
+
+// 新匹配一局。
+// NewMatch
+
+// 取消匹配。
+// CancelMatch
+
+// 再来一局。
+// ReMatch
+
+// 匹配结果。
+message MatchOk {
+    // 匹配到的对手的信息。
+    required User rival_info = 1;
+    // 多少秒之后自动开始一局。
+    required int32 start_seconds = 2;
+}
+
+// 匹配失败。
+message MatchFail {
+    required MsgResult result = 1;
+}
+
+// 开始一局。
+message StartRound {
+    // 本局最长的时间。如果超过此时间，则认为两边平局。（单位：秒）
+    required int32 round_timeout = 1;
+}
+
+// 服务器发给客户端的同步数据。
+message SyncData {
+    // 我当前的血量值。
+    required int32 my_health = 1;
+    // 对手当前的血量值。
+    required int32 rival_health = 2;
+    // 对手的能量值。
+    required int32 rival_energy = 3;
+}
+
+// 对服务器的同步数据的反馈。
+message SyncDataResponse {
+    // 当前我的怒气值。
+    required int32 my_energy = 1;
+}
+
+// 使用技能。
+message UseSkill {
+    // 使用的技能代码。
+    required int32 skill_code = 1;
+    // 技能造成的物理伤害。
+    required int32 physical_damage = 2;
+}
+
+// 使用技能成功。
+message UseSkillOk {
+    // 使用的技能代码。
+    required int32 skill_code = 1;
+    // 服务器端实际采纳的物理伤害值。
+    required int32 physical_damage = 2;
+    // 当前的同步数据。
+    required SyncData sync_data = 3;
+    // 是否将对方击败（KO存在，并且为true）。
+    optional bool ko = 4;
+}
+
+// 使用技能失败。
+message UseSkillFail {
+    required MsgResult result = 1;
+}
+
+// 对手使用技能。
+message RivalUseSkill {
+    // 对手使用的技能代码。
+    required int32 skill_code = 1;
+    // 技能的等级。
+    required int32 skill_level = 2;
+    // 当前的同步数据。
+    required SyncData sync_data = 3;
+    // 对方此技能造成的物理伤害。
+    required int32 physical_damage = 4;
+    // 是否击败对手。
+    optional bool ko = 5;
+}
+
+// 玩家在游戏的过程中，请求奖励。比如见到金币之类的。
+message AttainExtraReward {
+    // 玩家请求的奖励列表。
+    repeated Currency extra_reward = 1;
+}
+
+// 玩家在游戏过程中请求奖励成功。
+message AttainExtraRewardOk {
+    // 奖励过之后，玩家拥有的当前值。
+    repeated Currency reward_result = 2;
+}
+
+// 结束一局。
+message EndRound {
+    // 我的信息。
+    required User my_info = 1;
+    // 对手的信息。
+    required User rival_info = 2;
+    // 我是否赢了。
+    required bool win = 3;
+    // 各种奖励。
+    repeated Currency round_reward = 4;
+}
+
+// ---- 推图相关命令 Start ----
+
+// 请求一次异步挑战。
+message RequestChallenge {
+    // 大关的id。
+    required int32 major_level_id = 1;
+    // 小关的id。
+    required int32 sub_level_id = 2;
+}
+
+// 请求挑战成功。
+message RequestChallengeOk {
+    // 大关的id。
+    required int32 major_level_id = 1;
+    // 小关的id。
+    required int32 sub_level_id = 2;
+    // 生成的挑战id。
+    required string challenge_id = 3;
+    // 对方老大的数据。
+    required DefenseData boss_data = 4;
+    // 对方小弟的辅助数据。
+    repeated TeamAdd fellow_data = 5;
+}
+
+// 请求挑战失败。
+message RequestChallengeFail {
+    // 大关的id。
+    required int32 major_level_id = 1;
+    // 小关的id。
+    required int32 sub_level_id = 2;
+    // 结果。
+    required MsgResult result = 3;
+}
+
+// 请求开始挑战。
+message RequestStartChallenge {
+    // 挑战的id。
+    required string challenge_id = 1;
+    // 请求组队的好友的userId。
+    repeated string friend_user_id = 2;
+}
+
+// 请求开始挑战失败。
+message RequestStartChallengeFail {
+    required string challenge_id = 1;
+    required MsgResult result = 2;
+}
+
+// 开始挑战赛。
+message StartChallenge {
+    // 生成的挑战ID。
+    required string challenge_id = 1;
+    // 好友的数据。
+    repeated TeamAdd friend_data = 2;
+    // 本局的时间限制。(超过时间，则认为战斗失败！单位：秒)
+    required int32 round_timeout = 3;
+}
+
+// 玩家的防御数据。
+message DefenseData {
+    // 玩家当时的昵称。
+    required string nickname = 1;
+    // 玩家当时的等级。
+    required int32 level = 2;
+    // 玩家当时使用的角色。
+    required int32 character = 3;
+    // 角色上使用的装备。
+    repeated int32 wear_equip = 4;
+    // 玩家当时的血量。
+    required int32 round_init_health = 5;
+    // 玩家当时的蓄力槽容量。
+    required int32 energy_capacity = 6;
+    // 玩家本局上阵的蔬菜。
+    repeated VegetableUsed vegetable = 7;
+    // 玩家使用的技能序列。
+    repeated UseSkillEvent skill_event = 10;
+}
+
+// 队友加成。
+message TeamAdd {
+    // 昵称。
+    required string nickname = 1;
+    // 角色。
+    required int32 character = 2;
+    // 初始健康值。
+    required int32 round_init_health = 3;
+    // 攻击加成。
+    required int32 attack_add = 4;
+}
+
+// 在对战中使用的蔬菜。
+message VegetableUsed {
+    // 蔬菜的代码。
+    required int32 vegetable_code = 1;
+    // 蔬菜当时的等级。
+    required int32 level = 2;
+}
+
+// 玩家的技能事件，放在防御数据里。
+message UseSkillEvent {
+    // 与上一个技能使用事件或者开局事件发生的时间间隔。
+    required int64 time_delta = 1;
+    // 技能的代码。
+    required int32 skill_code = 2;
+    // 技能的等级。
+    required int32 skill_level = 3;
+    // 技能造成的物理伤害。
+    required int32 physical_damage = 4;
+}
+
+// 挑战之后上传的挑战ID。
+message UploadChallenge {
+    // 挑战ID。
+    required string challenge_id = 1;
+    // 我是否赢了。
+    required bool is_win = 2;
+    // 我的防御数据。
+    required DefenseData my_defense_data = 3;
+}
+
+// 成功上传挑战数据。
+message UploadChallengeOk {
+    // 成功上传的挑战的ID。
+    required string challenge_id = 1;
+    // 本局获得的评星数量。
+    required int32 star_count = 2;
+    // 各种奖励。
+    repeated Currency round_reward = 3;
+    // 如果出现，则解锁了一些元素。
+    optional UnlockElement unlock_element = 4;
+}
+
+// 上传挑战数据失败。
+message UploadChallengeFail {
+    // 结果的代码和原因。
+    required MsgResult result = 1;
+}
+
+// ---- 排行榜相关命令 Start ----
+
+// 请求排行榜数据。
+message RequestLeaderBoard {
+    // 排行榜的类型。
+    required int32 type = 1;
+}
+
+// 排行榜数据。
+message LeaderboardItem {
+    // 全局排名。
+    required int64 global_rank = 1;
+    // 子榜排名。
+    required int64 sub_rank = 2;
+    // 昵称。
+    required string nickname = 3;
+    // 用户的id。
+    required string user_id = 4;
+}
+
+// 排行榜数据。
+message Leaderboard {
+    // 排行榜的类型。
+    required int32 type = 1;
+    // 排行榜中的数据。
+    repeated LeaderboardItem item = 2;
+    // 我单独的数据。
+    required LeaderboardItem my_item = 3;
+}
+
+// ---- 排行榜相关命令 End ----

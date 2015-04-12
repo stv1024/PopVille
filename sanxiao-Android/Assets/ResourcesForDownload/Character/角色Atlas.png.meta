@@ -1,0 +1,410 @@
+fileFormatVersion: 2
+guid: 15c51d7670ccb412aaebb7540cd99b0f
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: C_Atlas_Body_0
+    21300002: C_Atlas_BHand_0
+    21300004: C_Atlas_Leg
+    21300006: C_Atlas_Foot
+    21300008: C_Atlas_Mouth_0
+    21300010: C_Atlas_BfHand_0
+    21300012: C_Atlas_Mouth_1
+    21300014: C_Atlas_Glass
+    21300016: C_Atlas_BfMouth_3
+    21300018: C_Atlas_BfMouth_2
+    21300020: C_Atlas_BHand_2
+    21300022: C_Atlas_BHand_4
+    21300024: C_Atlas_BfHand_1
+    21300026: C_Atlas_BHand_3
+    21300028: C_Atlas_BfHand_2
+    21300030: C_Atlas_Chin
+    21300032: C_Atlas_BHand_1
+    21300034: C_Atlas_BHand_5
+    21300036: C_Atlas_BHand_7
+    21300038: C_Atlas_BHand_6
+    21300040: C_Atlas_BfHand_4
+    21300042: C_Atlas_BfHand_3
+    21300044: C_Atlas_BfHand_5
+    21300046: C_Atlas_Smork
+    21300048: C_Atlas_Body_1
+    21300050: C_Atlas_Knife
+    21300052: C_Atlas_BfHand_6
+    21300054: C_Atlas_BHand_8
+    21300056: C_Atlas_BHand_10
+    21300058: C_Atlas_BHand_9
+    21300060: C_Atlas_Body_2
+    21300062: "\u89D2\u8272Atlas_31"
+    21300064: "\u89D2\u8272Atlas_32"
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: 1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: C_Atlas_Body_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 862
+        width: 94
+        height: 161
+      alignment: 9
+      pivot: {x: .507999957, y: .0662299246}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 966
+        width: 34
+        height: 57
+      alignment: 9
+      pivot: {x: .713163018, y: .841297865}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Leg
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 987
+        width: 8
+        height: 30
+      alignment: 9
+      pivot: {x: .547679901, y: .817875147}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Foot
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1018
+        width: 19
+        height: 6
+      alignment: 9
+      pivot: {x: .869436145, y: .27251181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Mouth_0
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 936
+        width: 47
+        height: 29
+      alignment: 9
+      pivot: {x: .857102394, y: .368465036}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 957
+        width: 40
+        height: 66
+      alignment: 9
+      pivot: {x: .356956095, y: .86989063}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Mouth_1
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 918
+        width: 51
+        height: 38
+      alignment: 9
+      pivot: {x: .896408975, y: .409656733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Glass
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 1000
+        width: 56
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfMouth_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 962
+        width: 49
+        height: 35
+      alignment: 9
+      pivot: {x: .876808345, y: .407681704}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfMouth_2
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 924
+        width: 62
+        height: 35
+      alignment: 9
+      pivot: {x: .653810561, y: .347419083}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 970
+        width: 62
+        height: 53
+      alignment: 9
+      pivot: {x: .806907892, y: .168592915}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_4
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 916
+        width: 63
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_1
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 965
+        width: 54
+        height: 59
+      alignment: 9
+      pivot: {x: .370977908, y: .841144085}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_3
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 976
+        width: 42
+        height: 48
+      alignment: 9
+      pivot: {x: .786435068, y: .771516144}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 892
+        width: 48
+        height: 72
+      alignment: 9
+      pivot: {x: .517579377, y: .828146219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Chin
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 892
+        width: 26
+        height: 42
+      alignment: 9
+      pivot: {x: .499999702, y: .830973327}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_1
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 829
+        width: 61
+        height: 62
+      alignment: 9
+      pivot: {x: .863219976, y: .197617069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 863
+        width: 93
+        height: 53
+      alignment: 9
+      pivot: {x: .15401566, y: .755434453}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_7
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 776
+        width: 62
+        height: 86
+      alignment: 9
+      pivot: {x: .589751959, y: .837496042}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_6
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 788
+        width: 44
+        height: 71
+      alignment: 9
+      pivot: {x: .450301439, y: .859656096}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_4
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 786
+        width: 65
+        height: 75
+      alignment: 9
+      pivot: {x: .687471807, y: .879109681}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 669
+        width: 66
+        height: 91
+      alignment: 9
+      pivot: {x: .382362008, y: .919210911}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_5
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 787
+        width: 50
+        height: 91
+      alignment: 9
+      pivot: {x: .400015265, y: .891424477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Smork
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 769
+        width: 37
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Body_1
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 357
+        width: 127
+        height: 171
+      alignment: 9
+      pivot: {x: .633694649, y: .0493597724}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Knife
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 537
+        width: 214
+        height: 239
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BfHand_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 551
+        width: 65
+        height: 117
+      alignment: 9
+      pivot: {x: .533489645, y: .875827909}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_8
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 669
+        width: 61
+        height: 83
+      alignment: 9
+      pivot: {x: .47858867, y: .89864707}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_10
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 615
+        width: 73
+        height: 40
+      alignment: 9
+      pivot: {x: .577530742, y: .227897644}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_BHand_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 526
+        width: 58
+        height: 79
+      alignment: 9
+      pivot: {x: .532012045, y: .818559587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: C_Atlas_Body_2
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 308
+        width: 137
+        height: 133
+      alignment: 9
+      pivot: {x: .34103933, y: .0683107302}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: "\u89D2\u8272Atlas_31"
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 835
+        width: 62
+        height: 189
+      alignment: 9
+      pivot: {x: .521018744, y: .882669747}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: "\u89D2\u8272Atlas_32"
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 889
+        width: 71
+        height: 133
+      alignment: 9
+      pivot: {x: .481645614, y: .823337197}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,377 @@
+fileFormatVersion: 2
+guid: 01f4f31f5b7bfde47bd8fbcaa9fdb85a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas-Chicken_0
+    21300002: Atlas-Chicken_1
+    21300004: Atlas-Chicken_2
+    21300006: Atlas-Chicken_3
+    21300008: Atlas-Chicken_4
+    21300010: Atlas-Chicken_5
+    21300012: Atlas-Chicken_6
+    21300014: Atlas-Chicken_7
+    21300016: Atlas-Chicken_8
+    21300018: Atlas-Chicken_9
+    21300020: Atlas-Chicken_10
+    21300022: Atlas-Chicken_11
+    21300024: Atlas-Chicken_12
+    21300026: Atlas-Chicken_13
+    21300028: Atlas-Chicken_14
+    21300030: Atlas-Chicken_15
+    21300032: Atlas-Chicken_16
+    21300034: Atlas-Chicken_17
+    21300036: Atlas-Chicken_18
+    21300038: Atlas-Chicken_19
+    21300040: Atlas-Chicken_20
+    21300042: Atlas-Chicken_21
+    21300044: Atlas-Chicken_22
+    21300046: Atlas-Chicken_23
+    21300048: Atlas-Chicken_24
+    21300050: Atlas-Chicken_25
+    21300052: Atlas-Chicken_26
+    21300054: Atlas-Chicken_27
+    21300056: Atlas-Chicken_28
+    21300058: Atlas-Chicken_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Atlas-Chicken_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 401
+        width: 94
+        height: 111
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 486
+        width: 11
+        height: 25
+      alignment: 9
+      pivot: {x: .28192693, y: .919158936}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 463
+        width: 34
+        height: 48
+      alignment: 9
+      pivot: {x: .214595124, y: .869164765}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 475
+        width: 41
+        height: 35
+      alignment: 9
+      pivot: {x: .489709616, y: .831238687}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_4
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 493
+        width: 28
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_5
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 469
+        width: 57
+        height: 23
+      alignment: 9
+      pivot: {x: .314954787, y: .72012198}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_6
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 471
+        width: 26
+        height: 41
+      alignment: 9
+      pivot: {x: .483772874, y: .818999529}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_7
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 399
+        width: 88
+        height: 68
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_8
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 332
+        width: 88
+        height: 128
+      alignment: 9
+      pivot: {x: .519177496, y: .163796186}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_9
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 336
+        width: 34
+        height: 65
+      alignment: 9
+      pivot: {x: .710951328, y: .714196801}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 290
+        width: 48
+        height: 43
+      alignment: 9
+      pivot: {x: .464841455, y: .853220403}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_11
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 357
+        width: 45
+        height: 39
+      alignment: 9
+      pivot: {x: .621882975, y: .251185477}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_12
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 259
+        width: 107
+        height: 138
+      alignment: 9
+      pivot: {x: .606461585, y: .185101494}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_13
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 269
+        width: 17
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_14
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 424
+        width: 29
+        height: 14
+      alignment: 9
+      pivot: {x: .678988814, y: .429682851}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_15
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 338
+        width: 44
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_16
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 13
+        width: 37
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_17
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 414
+        width: 16
+        height: 3
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_18
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 295
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_19
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 264
+        width: 27
+        height: 39
+      alignment: 9
+      pivot: {x: .500000298, y: .918397546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_20
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 169
+        width: 109
+        height: 92
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_21
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 248
+        width: 30
+        height: 41
+      alignment: 9
+      pivot: {x: .484202564, y: .838103533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_22
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 227
+        width: 37
+        height: 19
+      alignment: 9
+      pivot: {x: .56216222, y: .494738132}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_23
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 147
+        width: 111
+        height: 111
+      alignment: 9
+      pivot: {x: .539123237, y: .180494562}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 21
+        width: 122
+        height: 145
+      alignment: 9
+      pivot: {x: .553393424, y: .175548032}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_25
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 396
+        width: 121
+        height: 114
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_26
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 252
+        width: 121
+        height: 133
+      alignment: 9
+      pivot: {x: .535889447, y: .157157958}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_27
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 60
+        width: 95
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_28
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 122
+        height: 150
+      alignment: 9
+      pivot: {x: .630079925, y: .200668409}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Chicken_29
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 493
+        width: 28
+        height: 10
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

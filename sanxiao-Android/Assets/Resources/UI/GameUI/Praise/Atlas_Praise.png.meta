@@ -1,0 +1,102 @@
+fileFormatVersion: 2
+guid: 47eec5997703418488d55fdc17bad226
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas_Praise_0
+    21300002: Atlas_Praise_1
+    21300004: Atlas_Praise_2
+    21300006: Atlas_Praise_3
+    21300008: Atlas_Praise_4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Atlas_Praise_0
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 871
+        width: 163
+        height: 138
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas_Praise_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 861
+        width: 548
+        height: 150
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas_Praise_2
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 706
+        width: 305
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas_Praise_3
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 705
+        width: 427
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas_Praise_4
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 545
+        width: 547
+        height: 152
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

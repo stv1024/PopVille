@@ -1,0 +1,102 @@
+package com.morln.game.newvs;
+
+import "common.proto";
+
+option java_package = "com.morln.game.newvs.command";
+option java_outer_classname = "Transaction";
+option optimize_for = SPEED;
+
+// 玩家请求兑换。
+message RequestExchange {
+    // 兑换包的名称。
+    required string name = 1;
+    // 数量。
+    required int32 count = 2;
+}
+
+// 兑换成功。
+message ExchangeOk {
+    // 兑换包的名称。
+    required string name = 1;
+    // 兑换的数量。
+    required int32 count = 2;
+    // 玩家当前的状态。
+    required User user = 3;
+}
+
+// 兑换失败。
+message ExchangeFail {
+    // 兑换包的名称。
+    required string name = 1;
+    // 兑换失败的原因。
+    required MsgResult result = 2;
+}
+
+// 请求生成交易。
+message RequestTrade {
+    // 充值包的名称。
+    required string recharge_name = 1;
+    // 充值的数量。
+    required int32 count = 2;
+    // 如果是代买，则添加一个receiver的user_id。
+    optional string receiver_user_id = 3;
+    // 支付渠道。
+    required int32 pay_channel = 4;
+    // 客户端版本号。
+    optional int32 client_version = 5;
+}
+
+// 请求交易成功。
+message RequestTradeOk {
+    // 充值包的名称。
+    required string recharge_name = 1;
+    // 充值的数量。
+    required int32 count = 2;
+    // 生成的交易订单号。
+    required string out_trade_no = 3;
+    // 以json的形式存放支付所需的额外参数
+    optional string extra = 4;
+}
+
+// 请求交易失败。
+message RequestTradeFail {
+    // 充值包名称。
+    required string recharge_name = 1;
+    // 充值的数量。
+    required int32 count = 2;
+    // 结果。
+    required MsgResult result = 3;
+}
+
+// 检查订单。
+message CheckTrade {
+    // 订单的outTradeNo。
+    required string out_trade_no = 1;
+    // 订单的tradeNo。
+    optional string trade_no = 2;
+    // 订单附带的extra信息。
+    optional string extra = 3;
+}
+
+// 检查订单成功。
+message CheckTradeOk {
+    // 订单的outTradeNo。
+    required string out_trade_no = 1;
+    // 订单的支付状态。
+    required int32 pay_state = 2;
+    // 订单的发货状态。
+    required int32 post_state = 3;
+    // 已经发货的项目。
+    repeated Currency posted = 4;
+}
+
+// 检查订单失败。
+message CheckTradeFail {
+    required string out_trade_no = 1;
+    required MsgResult result = 2;
+}
+
+// 请求首冲包。
+// RequestFirstChargePack
+
+// 首冲包。

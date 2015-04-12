@@ -1,0 +1,44 @@
+package com.morln.game.newvs;
+
+import "common.proto";
+
+option java_package = "com.morln.game.newvs.command";
+option java_outer_classname = "LoginRegister";
+option optimize_for = SPEED;
+
+// 游客设备登陆。
+message DeviceLogin {
+    // 设备的唯一识别ID。
+    required string device_uid = 1;
+    // 客户端信息。
+    required ClientInfo client_info = 2;
+}
+
+// 登录成功。
+message LoginOk {
+    // 我的账户信息。
+    required User my_user_info = 1;
+    // 我拥有的技能列表。
+    repeated UserSkill my_skill = 2;
+    // 我的蔬菜列表。
+    repeated UserVegetable my_vegetable = 3;
+    // 我的角色列表。
+    repeated UserCharacter my_character = 4;
+    // 我的装备列表。
+    repeated UserEquip my_equip = 5;
+    // 推图模式的已解锁列表。
+    repeated MajorLevelUnlockInfo challenge_unlock_info = 20;
+    // 游戏的配置类。
+    required ConfigHash config_hash = 30;
+    // 是否需要首次登陆教学。
+    optional bool first_time_guide = 40;
+    // 社交好友的解锁进度。
+    repeated SNSFriendUnlockInfo sns_friend_unlock_info = 50;
+    // 是否可以首冲。
+    optional bool is_first_charge = 60;
+}
+
+// 登录失败。
+message LoginFail {
+    required MsgResult result = 1;
+}

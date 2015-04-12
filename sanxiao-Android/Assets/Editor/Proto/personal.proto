@@ -1,0 +1,300 @@
+package com.morln.game.newvs;
+
+import "common.proto";
+
+option java_package = "com.morln.game.newvs.command";
+option java_outer_classname = "Personal";
+option optimize_for = SPEED;
+
+// 请求可用昵称。
+// RequestNickname
+
+// 可选昵称。
+message NicknameProvided {
+    repeated string nickname = 1;
+}
+
+// 编辑用户信息。
+message EditUserInfo {
+    // 新昵称。
+    optional string new_nickname = 1;
+    // 新角色。
+    optional int32 new_character = 2;
+}
+
+// 编辑用户信息结果。
+message EditUserInfoResult {
+    // 编辑昵称的结果。
+    optional MsgResult nickname_result = 1;
+    // 编辑角色的结果。
+    optional MsgResult character_result = 2;
+    // 当前最新的用户信息。
+    optional User current_user = 100;
+}
+
+// 玩家请求自己的疲劳值。
+// REQUEST_MY_HEART_INFO
+
+// 玩家的疲劳值。
+message UserHeartInfo {
+    // 玩家当前拥有的疲劳值数量。
+    required int64 count = 1;
+    // 获得下一个疲劳值需要的时间。单位：毫秒。
+    // 当用户没有下一个疲劳值得时候，next_need_time = -1。
+    required int64 next_need_time = 2;
+}
+
+// 玩家升级技能。
+message UpgradeSkill {
+    // 需要升级的技能代码。
+    required int32 skill_code = 1;
+}
+
+// 升级技能成功。
+message UpgradeSkillOk {
+    // 用户当前的技能数据。
+    required UserSkill current_skill = 1;
+    // 用户当前的数据。
+    required User current_user = 2;
+}
+
+// 升级技能失败。
+message UpgradeSkillFail {
+    // 技能失败的结果码和原因。
+    required MsgResult result = 1;
+}
+
+// 请求刷新一个玩家蔬菜的信息。
+message RequestUserVegetable {
+    // 蔬菜的code。
+    required int32 vegetable_code = 1;
+}
+
+// 请求成功的时候，直接发送UserVegetable消息给客户端。
+
+// 请求玩家蔬菜信息失败。
+message RequestUserVegetableFail {
+    required MsgResult result = 1;
+    required int32 vegetable_code = 2;
+}
+
+// 升级蔬菜。
+message UpgradeVegetable {
+    required int32 vegetable_code = 1;
+}
+
+// 升级蔬菜成功。
+message UpgradeVegetableOk {
+    // 玩家当前的蔬菜数据。
+    required UserVegetable current_vegetable = 1;
+    // 玩家当前的用户数据。
+    required User current_user = 2;
+}
+
+// 升级蔬菜失败。
+message UpgradeVegetableFail {
+    required MsgResult result = 1;
+}
+
+// 加速完成蔬菜升级。
+message SpeedUpVegetableUpgrade {
+    required int32 vegetable_code = 1;
+}
+
+// 加速蔬菜升级成功。
+message SpeedUpVegetableUpgradeOk {
+    required UserVegetable current_vegetable = 1;
+}
+
+// 加速升级蔬菜失败。
+message SpeedUpVegetableUpgradeFail {
+    required int32 vegetable_code = 1;
+    required MsgResult result = 2;
+}
+
+// 使用或者卸下装备。
+message UseEquip {
+    // 角色代码。
+    required int32 character_code = 1;
+    // 装备代码。
+    required int32 equip_code = 2;
+    // 使用还是卸下。
+    required bool use_or_not = 3;
+}
+
+// 使用或卸下装备成功。
+message UseEquipOk {
+    // 角色代码。
+    required int32 character_code = 1;
+    // 装备代码。
+    required int32 equip_code = 2;
+    // 使用还是卸下。
+    required bool use_or_not = 3;
+}
+
+// 使用装备失败。
+message UseEquipFail {
+    required MsgResult result = 1;
+    required int32 character_code = 2;
+    required int32 equip_code = 3;
+    required bool use_or_not = 4;
+}
+
+// 购买角色。
+message BuyCharacter {
+    required int32 character_code = 1;
+}
+
+// 购买角色成功。
+message BuyCharacterOk {
+    // 购买成功后的玩家数据。
+    required User current_user = 1;
+    // 刚买的角色数据。
+    required UserCharacter new_character = 2;
+}
+
+// 购买角色失败。
+message BuyCharacterFail {
+    required int32 character_code = 1;
+    required MsgResult result = 2;
+}
+
+// 玩家切换角色。
+message ChangeCharacter {
+    // 新使用的角色代码。
+    required int32 new_character_code = 1;
+}
+
+// 切换角色成功。
+message ChangeCharacterOk {
+    required int32 new_character_code = 2;
+}
+
+// 切换角色失败。
+message ChangeCharacterFail {
+    required MsgResult result = 1;
+    required int32 new_character_code = 2;
+}
+
+// 刷新邮件列表。
+message RefreshMailList {
+    // 邮件的状态：0 查询未读，1 查询已读，2 查询全部。
+    required int32 read_state = 1;
+}
+
+// 刷新邮件列表失败。
+message RefreshMailListFail {
+    required MsgResult result = 1;
+}
+
+// 玩家的邮件列表。
+message UserMailList {
+    repeated Mail mail = 1;
+}
+
+// 请求礼品。
+message RequestMailGift {
+    // 邮件的id。
+    required string mail_id = 1;
+    // 礼物的序列号列表。
+    repeated int32 sn = 2;
+}
+
+// 请求礼品成功。
+message RequestMailGiftOK {
+    // 邮件的id。
+    required string mail_id = 1;
+    // 申请的礼品列表。。
+    repeated int32 sn = 2;
+    // 当前用户的信息。
+    required User user = 3;
+}
+
+// 请求礼物失败。
+message RequestMailGiftFail {
+    required MsgResult result = 1;
+    // 邮件的id。
+    required string mail_id = 2;
+    // 申请的礼品列表。。
+    repeated int32 sn = 3;
+}
+
+// 需要客户端重新上传授权。
+message NeedOAuthInfo {
+    // OAuth的类型。
+    optional int32 type = 1;
+    // 显示给用户便于用户重新绑定的社交账户名称。
+    optional string name = 2;
+}
+
+// 客户端绑定OAuth信息。
+message BindOAuthInfo {
+    // OAuth的类型。
+    required int32 type = 1;
+    // oauth的授权code。
+    required string authorize_code = 2;
+    // 上传绑定信息设备的id。
+    required string device_id = 3;
+    // 绑定腾讯微博，需要在这里上传openId。
+    optional string uid = 4;
+}
+
+// 成功绑定OAuth信息。
+message BindOAuthInfoOk {
+    required string uid = 1;
+    // 账号的accessToken。
+    required string access_token = 2;
+    // 过期时间。单位：秒。
+    required int32 expire_time = 3;
+}
+
+// 上传OAuth账户信息失败。
+message BindOAuthInfoFail {
+    required MsgResult result = 1;
+}
+
+// 百度推送的配置信息。
+message BaiduPushInfo {
+    required string app_id = 1;
+    required string channel_id = 2;
+    required string user_id = 3;
+}
+
+// 玩家绑定推送信息。
+message BindUserPushInfo {
+    // 玩家ios设备推送用的token。
+    optional string apns_device_token = 1;
+    // 玩家安卓设备的百度推送信息。
+    optional BaiduPushInfo baidu_push_info = 2;
+}
+
+// 绑定玩家推送信息成功。
+message BindUserPushInfoOk {
+    // 绑定ios push成功。
+    optional bool apns_ok = 1;
+    // 绑定百度推送信息成功。
+    optional bool baidu_ok = 2;
+}
+
+// 绑定用户推送信息失败。
+message BindUserPushInfoFail {
+    optional bool apns_fail = 1;
+    optional bool baidu_fail = 2;
+    required MsgResult result = 3;
+}
+
+// 请求好友信息列表。
+// RequestSNSFriendInfoList
+
+// 社交好友信息列表。
+message SNSFriendInfoList {
+    repeated SNSFriendInfo friend = 1;
+}
+
+// 请求随机队友列表。
+// RequestRandomTeamMemberList
+
+// 随机队友列表。
+message RandomTeamMemberList {
+    repeated RandomTeamMember team_member = 1;
+}

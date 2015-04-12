@@ -1,0 +1,190 @@
+fileFormatVersion: 2
+guid: c50fad9a022ec804eb442b50831242fd
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas-SeaTile_1
+    21300002: Atlas-SeaTile_2
+    21300004: Atlas-SeaTile_3
+    21300006: Atlas-SeaTile_4
+    21300008: Atlas-SeaTile_5
+    21300010: Atlas-SeaTile_6
+    21300012: Atlas-SeaTile_6
+    21300014: Atlas-SeaTile_7
+    21300016: Atlas-SeaTile_8
+    21300018: Atlas-SeaTile_9
+    21300020: Atlas-SeaTile_10
+    21300022: Atlas-SeaTile_11
+    21300024: Atlas-SeaTile_12
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Atlas-SeaTile_1
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 885
+        width: 216
+        height: 125
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_2
+      rect:
+        serializedVersion: 2
+        x: 650
+        y: 801
+        width: 136
+        height: 70
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_3
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 677
+        width: 207
+        height: 104
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_4
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 470
+        width: 238
+        height: 193
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 680
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_6
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 50
+        width: 380
+        height: 382
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_6
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 816
+        width: 191
+        height: 194
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_7
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 745
+        width: 286
+        height: 274
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_8
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 858
+        width: 157
+        height: 166
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_9
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 680
+        width: 167
+        height: 177
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 334
+        width: 621
+        height: 339
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 682
+        width: 320
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-SeaTile_12
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 621
+        height: 272
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,13 @@
+package com.morln.game.newvs;
+
+option java_package = "com.morln.game.newvs.command";
+option optimize_for = SPEED;
+
+message Packet {
+    // 命令的类型，这次使用int值。
+    required int32 type = 1;
+    // 命令的二进制流，有的空命令可以只有type。
+    optional bytes content = 2;
+    // 加密的算法及加密的key等信息。
+    optional string encryption = 3;
+}

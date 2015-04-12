@@ -1,0 +1,721 @@
+package com.morln.game.newvs;
+
+option java_package = "com.morln.game.newvs.command";
+option java_outer_classname = "Common";
+option optimize_for = SPEED;
+
+// 消息结果。
+message MsgResult {
+    // 结果码。
+    required int32 code = 1;
+    // 对结果的描述。
+    optional string msg = 2;
+}
+
+// 提示。
+message Toast {
+    // 提示的类型。
+    required int32 type = 1;
+    // 提示的内容。
+    required string content = 2;
+}
+
+// 菜单界面下方显示的滚动消息。
+message News {
+    // 新闻的id。
+    required string news_id = 1;
+    // 新闻的内容。
+    required string content = 2;
+}
+
+// 停止消息。
+message StopNews {
+    required string news_id = 1;
+}
+
+// 小喇叭。
+message Poster {
+    // 小喇叭的内容。
+    required string content = 1;
+}
+
+// 金钱价格。
+message Currency {
+    // 货币类型。
+    required int32 type = 1;
+    // 货币数量。
+    required int64 amount = 2;
+}
+
+// 用户。
+message User {
+
+    //// 简版信息 ---------------->
+
+    // 用户的唯一ID(数据库中的uuid)。
+    required string user_id = 1;
+    // 昵称。
+    required string nickname = 2;
+    // 用户当前的等级。
+    required int32 level = 3;
+    // 玩家当前使用的角色代码。
+    required int32 character_code = 11;
+    // 每局开始时候拥有的血量。
+    required int32 round_init_health = 12;
+    // 玩家的蓄力槽容量。
+    required int32 energy_capacity = 13;
+
+    // 一共玩的局数。
+    required int64 round_count = 21;
+
+    //// 全版信息 ---------------->
+
+    // 用户的经验值。
+    optional int64 exp = 31;
+    // 用户当前经验值下限。
+    optional int64 exp_floor = 32;
+    // 用户当前经验值上限。
+    optional int64 exp_ceil = 33;
+    // 游戏内第一货币。
+    optional int64 money10 = 41;
+    // 游戏内第二货币。
+    optional int64 money1 = 42;
+
+}
+
+// 核心配置。
+message CoreConfig {
+    required string hash = 1;
+    // 爱心的上限值。
+    required int32 heart_max_limit = 2;
+    // 回复一个爱心所需要的时间（单位：毫秒）。
+    required int64 heart_recover_time = 3;
+}
+
+// 兑换包。
+message Exchange {
+    // 兑换包名称。
+    required string name = 1;
+    // 源货币类型。
+    required int32 from_type = 2;
+    // 目标货币类型。
+    required int32 to_type = 3;
+    // 源货币的数量。
+    required int64 from_amount = 4;
+    // 目标货币的数量。
+    required int64 to_amount = 5;
+}
+
+// 兑换包配置。
+message ExchangeConfig {
+    required string hash = 1;
+    repeated Exchange exchange = 2;
+}
+
+// 充值包。
+message Recharge {
+    // 充值包的名称。
+    required string name = 1;
+    // 充值包的价格。
+    required float price = 2;
+    // 购买的目标货币类型。
+    required int32 target_type = 4;
+    // 购买的目标货币数量。
+    required int32 target_amount = 5;
+    // 附加属性，通常是iap的productId，移动的计费代码。
+    optional string extra = 6;
+}
+
+// 充值包配置。
+message RechargeConfig {
+    required string hash = 1;
+    repeated Recharge recharge = 2;
+}
+
+// 装备。
+message Equip {
+    // 装备的code。
+    required int32 equip_code = 1;
+    // 装备的类型：0：头盔，1：盔甲，2：武器，3：盾，4：鞋子。
+    required int32 type = 2;
+    // 血量加成。
+    required int64 health_add = 3;
+    // 攻击加成。
+    required int64 attack_add = 4;
+    // 暴击概率。
+    required int32 critical_strike_rate = 5;
+    // 闪避概率。
+    required int32 dodge_rate = 6;
+}
+
+// 装备的配置。
+message EquipConfig {
+    required string hash = 1;
+    repeated Equip equip = 2;
+}
+
+// 用户拥有的装备。
+message UserEquip {
+    // 拥有的装备代码。
+    required int32 equip_code = 1;
+    // 玩家拥有装备的数量。
+    required int32 count = 2;
+}
+
+// ---- 技能 Start ----
+
+// 技能数据。
+message Skill {
+    // 技能代码。
+    required int32 skill_code = 1;
+    // 使用一次需要消耗的蓄力值。
+    repeated int32 use_cost = 2;
+    // 解锁技能所需要的玩家等级。
+    repeated int32 unlock_level = 3;
+    // 升级价格列表。一共有多少级以升级价格列表的个数来确定。
+    repeated Currency upgrade_cost = 4;
+    // 每一级的物理伤害列表。
+    repeated int32 physical_damage = 5;
+    // 技能的附加属性。
+    optional string extra = 10;
+}
+
+// 技能数据配置。
+message SkillConfig {
+    required string hash = 1;
+    repeated Skill skill = 2;
+}
+
+// 技能参数。
+message SkillParameter {
+    required int32 skill_code = 1;
+    // 技能配置的常量。
+    repeated float constant = 2;
+}
+
+// 技能参数配置。
+message SkillParameterConfig {
+    required string hash = 1;
+    repeated SkillParameter skill_parameter = 2;
+}
+
+// 玩家拥有的技能数据。
+message UserSkill {
+    // 技能的code。
+    required int32 code = 1;
+    // 我的技能的当前等级。
+    // 0：未解锁，>0：当前的等级。
+    required int32 level = 2;
+}
+
+// ---- 技能 End ----
+
+// 角色配置。
+message Character {
+    // 角色id。
+    required int32 character_code = 1;
+    // 角色每局开始时候具有的初始的蓄力值。
+    required int32 init_energy = 2;
+    // 解锁价格。
+    optional Currency unlock_cost = 3;
+}
+
+// 角色的介绍文本。
+message CharacterIntro {
+    // 角色的code。
+    required int32 character_code = 1;
+    // 角色的描述。
+    required string description = 2;
+    // 角色的天赋技能描述。
+    required string talent_intro = 3;
+}
+
+// 角色配置。
+message CharacterConfig {
+    required string hash = 1;
+    repeated Character character = 2;
+}
+
+// 角色介绍文本配置。
+message CharacterIntroTextConfig {
+    required string hash = 1;
+    // 角色介绍的列表。
+    repeated CharacterIntro intro = 2;
+}
+
+// 玩家的角色列表。
+message UserCharacter {
+    required int32 character_code = 1;
+    // 角色身上穿的装备的code。
+    repeated int32 wear_equip = 10;
+}
+
+// 蔬菜数据。
+message Vegetable {
+    // 蔬菜的代码。
+    required int32 vegetable_code = 1;
+    // 蔬菜的升级上限。
+    required int32 upgrade_limit = 2;
+    // 不同级别蔬菜的蓄力值列表。
+    repeated int32 level_energy = 3;
+    // 升级所需要的金币。
+    repeated Currency upgrade_cost = 4;
+    // TODO 添加蔬菜抗性相关的配置。
+}
+
+// 蔬菜配置。
+message VegetableConfig {
+    required string hash = 1;
+    repeated Vegetable vegetable = 2;
+}
+
+// 玩家的蔬菜数据。
+message UserVegetable {
+    // 蔬菜的id。
+    required int32 vegetable_code = 1;
+    // 蔬菜当前的升级上限。
+    required int32 current_upgrade_limit = 2;
+    // 当前的等级。
+    required int32 current_level = 3;
+    // 如果蔬菜在升级中，则mature_time是升级完成所需要的时间。单位：毫秒。
+    optional int64 mature_time = 4;
+}
+
+// 技能简介文本。
+message SkillIntroTextConfig {
+    required string hash = 1;
+    // 技能的代码列表。
+    repeated int32 skill_code = 2;
+    // 技能的显示名称。
+    repeated string display_name = 3;
+    // 技能的介绍。
+    repeated string intro = 4;
+}
+
+// 技能等级详情。
+message SkillLevelDetail {
+    // 技能代码。
+    required int32 skill_code = 1;
+    // 技能对应的每个等级的详情。
+    repeated string level_detail = 2;
+}
+
+// 技能等级详情的文本。
+message SkillLevelDetailTextConfig {
+    required string hash = 1;
+    // 技能等级详情列表。
+    repeated SkillLevelDetail detail = 2;
+}
+
+// 等待提示的文本配置。
+message WaitHintTextConfig {
+    required string hash = 1;
+    // 等待提示的列表。
+    repeated string hint = 2;
+}
+
+// 蔬菜的介绍。
+message VegetableIntro {
+    // 蔬菜的id。
+    required int32 vegetable_code = 1;
+    // 介绍文本内容。
+    required string intro_content = 2;
+}
+
+// 蔬菜介绍文本。
+message VegetableIntroTextConfig {
+    required string hash = 1;
+    // 蔬菜的介绍。
+    repeated VegetableIntro intro = 2;
+}
+
+// 装备介绍。
+message EquipIntro {
+    // 装备的code。
+    required int32 equip_code = 1;
+    // 介绍文本的内容。
+    required string intro_content = 2;
+}
+
+// 装备介绍文本。
+message EquipIntroTextConfig {
+    required string hash = 1;
+    repeated EquipIntro intro = 2;
+}
+
+// 大关卡的介绍。
+message MajorLevelIntro {
+    // 大关卡的id。
+    required int32 major_level_id = 1;
+    // 介绍的文本内容。
+    required string intro_content = 2;
+    // 关卡中可能掉落的装备。
+    repeated int32 hidden_equip = 3;
+}
+
+// 大关卡介绍文本配置。
+message MajorLevelIntroTextConfig {
+    required string hash = 1;
+    repeated MajorLevelIntro intro = 2;
+}
+
+// 社交平台参数。
+message OAuthParam {
+    // 社交平台的类型。
+    required int32 type = 1;
+    optional string app_key = 2;
+    optional string app_secret = 3;
+    optional string redirect_url = 4;
+}
+
+// 社交平台参数配置。
+message OAuthParamConfig {
+    required string hash = 1;
+    repeated OAuthParam param = 2;
+}
+
+// 登录奖励。
+message LoginRewardConfig {
+
+}
+
+// ---- 推图相关配置 Start ----
+
+// 玩家解锁大关卡的信息。
+message MajorLevelUnlockInfo {
+    // 大关的id。
+    required int32 major_level_id = 1;
+    // 本大关中的小关解锁的信息。
+    repeated SubLevelUnlockInfo sub_level_unlock_info = 2;
+    // 是否已经解锁。
+    required bool unlocked = 3;
+}
+
+// 玩家解锁小关的信息。
+message SubLevelUnlockInfo {
+    // 大关id。
+    required int32 major_level_id = 1;
+    // 小关的id。
+    required int32 sub_level_id = 2;
+    // 小关获得的星星数。
+    required int32 current_star = 3;
+    // 是否解锁。
+    required bool unlocked = 4;
+}
+
+// 推图关卡的总配置。
+message ChallengeLevelConfig {
+    required string hash = 1;
+    // 大关卡配置。
+    repeated MajorLevelData major_level = 2;
+}
+
+// 大关卡的配置信息。
+message MajorLevelData {
+    // 大关的id。
+    required int32 major_level_id = 1;
+    // 标题。
+    required string title = 2;
+    // 描述。
+    optional string description = 3;
+    // 小关的配置。
+    repeated SubLevelData sub_level = 4;
+}
+
+// 小关的配置。
+message SubLevelData {
+    // 小关的id。
+    required int32 sub_level_id = 1;
+    // 标题。
+    required string title = 2;
+    // 描述。
+    optional string description = 3;
+    // 是否可以组队打副本。
+    required bool can_team = 4;
+    // 关卡的宽度。
+    required int32 width = 5;
+    // 关卡的长度。
+    required int32 height = 6;
+    // 关卡的格子配置。
+    repeated int32 grid_config = 7;
+    // 关卡中掉落金币袋子的概率。例：60代表10000个糖果中会出现60个金币。
+    optional int32 coin_bag_probability = 10;
+    // 每个金币袋子包含的金币数量。
+    optional int32 coin_bag_capacity = 11;
+    // 关卡中掉落钻石的概率。例：60代表10000个糖果中会出现60个钻石。
+    optional int32 diamond_bag_probability = 12;
+    // 每个钻石袋子包含的钻石数量。
+    optional int32 diamond_bag_capacity = 13;
+    // 关卡中掉落血瓶的概率。例：60代表10000个糖果中会出现60个血瓶。
+    optional int32 health_bottle_probability = 14;
+    // 血瓶中包含的血值。
+    optional int32 health_bottle_capacity = 15;
+    // 关卡中掉落能量瓶的概率。例：60代表10000个糖果中会出现60个能量瓶。
+    optional int32 energy_bottle_probability = 16;
+    // 能量瓶中包含的能量值。
+    optional int32 energy_bottle_capacity = 17;
+}
+
+// ---- 推图相关配置 End ----
+
+// 各种配置的hash值列表。
+// 客户端登陆的时候发给客户端。
+// 如果客户端发现某个配置的hash值与缓存的hash值不一致，则请求下载该配置。
+// 0:全局配置。
+// 1:充值包的配置。
+// 2:技能数据。
+// 3:技能配置。
+// 4:兑换包配置。
+// 5:蔬菜配置。
+// 6:推图关卡配置。
+// 7:技能简介的文本。
+// 8:技能等级详情文本。
+// 9:蔬菜介绍的文本。
+// 10:等待的时候显示的提示文本。
+// 11:角色配置。
+// 12:装备配置。
+// 13:大关介绍文本。
+// 14:装备介绍文本。
+// 15:角色介绍文本。
+// 16:社交平台参数配置。
+message ConfigHash {
+    repeated string config_hash = 1;
+}
+
+// 请求服务器端的文本配置。
+message RequestConfig {
+    // 需要请求的配置id列表。
+    repeated int32 config_id = 1;
+}
+
+// 游戏所有的配置。
+message Config {
+    // 核心配置。
+    optional CoreConfig core_config = 1;
+    // 充值配置。
+    optional RechargeConfig recharge_config = 2;
+    // 技能配置。
+    optional SkillConfig skill_config = 3;
+    // 技能参数配置。
+    optional SkillParameterConfig skill_parameter_config = 4;
+    // 兑换包配置。
+    optional ExchangeConfig exchange_config = 5;
+    // 蔬菜配置。
+    optional VegetableConfig vegetable_config = 6;
+    // 推图关卡配置。
+    optional ChallengeLevelConfig challenge_level_config = 7;
+    // 技能简介文本。
+    optional SkillIntroTextConfig skill_intro_text_config = 8;
+    // 技能等级详情文本。
+    optional SkillLevelDetailTextConfig skill_level_detail_text_config = 9;
+    // 等待提示文本。
+    optional WaitHintTextConfig wait_hint_text_config = 10;
+    // 蔬菜介绍文本。
+    optional VegetableIntroTextConfig vegetable_intro_text_config = 11;
+    // 角色配置。
+    optional CharacterConfig character_config = 12;
+    // 装备配置。
+    optional EquipConfig equip_config = 13;
+    // 大关介绍文本。
+    optional MajorLevelIntroTextConfig major_level_intro_text_config = 14;
+    // 装备介绍文本。
+    optional EquipIntroTextConfig equip_intro_text_config = 15;
+    // 角色介绍文本。
+    optional CharacterIntroTextConfig character_intro_text_config = 16;
+    // 社交平台参数配置。
+    optional OAuthParamConfig oauth_param_config = 17;
+}
+
+// 客户端向服务器发送的版本信息。
+message ClientInfo {
+    // 客户端当前的版本号。
+    required int32 client_version = 1;
+    // 客户端的渠道。
+    required string sale_channel = 2;
+    // 客户端的操作系统。(ios android)
+    required string os = 3;
+}
+
+// ---- 解锁相关命令 Start ----
+
+// 玩家升级了。
+message LevelUp {
+    // 升级前的等级。
+    required int32 from_level = 1;
+    // 升级后的等级。
+    required int32 to_level = 2;
+    // 升级前的经验。
+    required int64 from_exp = 3;
+    // 升级后的经验。
+    required int64 to_exp = 4;
+}
+
+// 蓄力槽升级。
+message EnergyCapacityUp {
+    // 升级前的等级。
+    required int32 from_level = 1;
+    // 升级后的等级。
+    required int32 to_level = 2;
+    // 升级之前的容量。
+    required int32 from_capacity = 3;
+    // 升级后的蓄力槽容量。
+    required int32 to_capacity = 4;
+}
+
+// 蔬菜解锁。
+message VegetableUnlock {
+    // 蔬菜的id。
+    required int32 vegetable_code = 1;
+    // 新的升级上限。
+    required int32 new_upgrade_limit = 2;
+}
+
+// 技能解锁。
+message SkillUnlock {
+    // 技能代码。
+    required int32 skill_code = 1;
+}
+
+// 出现装备。
+message EquipAppear {
+    // 装备的代码。
+    repeated int32 equip_code = 1;
+}
+
+// 解锁元素。
+message UnlockElement {
+    // 玩家升级。
+    optional LevelUp level_up = 1;
+    // 蓄力槽升级。
+    optional EnergyCapacityUp energy_capacity_up = 2;
+    // 蔬菜解锁。
+    repeated VegetableUnlock vegetable_unlock = 3;
+    // 技能解锁。
+    repeated SkillUnlock skill_unlock = 4;
+    // 解锁的大关。
+    repeated MajorLevelUnlockInfo major_level_unlock = 5;
+    // 解锁的小关。
+    repeated SubLevelUnlockInfo sub_level_unlock = 6;
+    // 出现装备。
+    optional EquipAppear equip_appear = 7;
+}
+
+// ---- 解锁相关命令 End ----
+
+// 礼物。
+message Gift {
+    // 礼品序列号。
+    required int32 sn = 1;
+    // 礼品的类型。
+    required int32 type = 2;
+    // 礼品的代码。
+    required int32 code = 3;
+    // 数量。
+    required int64 amount = 4;
+    // 是否已经领取。
+    required bool is_obtained = 5;
+}
+
+// 邮件。
+message Mail {
+    // 邮件的id。
+    required string mail_id = 1;
+    // 邮件的类型。
+    required int32 type = 2;
+    // 发件人的id。如果是系统邮件则为："system"
+    required string from_user_id = 3;
+    // 发件人的昵称。
+    required string from_nickname = 4;
+    // 标题。
+    optional string title = 5;
+    // 内容。
+    optional string content = 6;
+    // 是否已读。
+    required bool is_read = 7;
+    // 邮件的创建时间。
+    required int64 timestamp = 8;
+    // 邮件附带的礼品列表。
+    repeated Gift gift = 9;
+}
+
+// 社交账号的好友信息。
+message SNSFriendInfo {
+    // 社交账号uid。
+    required string uid = 1;
+    // 玩家的userId。
+    required string user_id = 2;
+    // 性别。
+    required int32 sex = 3;
+    // 玩家的昵称。
+    required string nickname = 4;
+    // 好友头像的url。
+    optional string head_icon_url = 5;
+    // 剩余的可组队的次数。
+    required int32 left_team_count = 6;
+}
+
+// 社交账号好友的解锁信息。
+message SNSFriendUnlockInfo {
+    // 社交账号的类型。
+    required int32 type = 1;
+    // 社交账号的uid。
+    required string uid = 2;
+    // 好友的userId。
+    required string user_id = 3;
+    // 昵称。
+    required string nickname = 4;
+    // 头像url。
+    optional string head_icon_url = 5;
+    // 好友解锁的大关id。
+    required int32 unlocked_major_level_id = 6;
+    // 好友解锁的大关的小关id。
+    required int32 unlocked_sub_level_id = 7;
+}
+
+// 随机队友信息。
+message RandomTeamMember {
+    // 随机队友的userId。
+    required string user_id = 1;
+    // 随机队友的角色。
+    required int32 character = 2;
+    // 随机队友的昵称。
+    required string nickname = 3;
+}
+
+// 交易。
+message Trade {
+    // 外部交易号。
+    required string out_trade_no = 1;
+    // 交易号。
+    optional string trade_no = 2;
+    // 支付包名称。
+    required string recharge_name = 3;
+    // 购买的支付包数量。
+    required int32 count = 4;
+    // 总费用。
+    required double total_fee = 5;
+    // 支付渠道。
+    required int32 pay_channel = 6;
+    // 购买人的userId。
+    required string buyer_user_id = 7;
+    // 收货人的userId。
+    optional string receiver_user_id = 8;
+    // 支付状态。
+    // PAY_STATE_CREATED = 1;
+    // PAY_STATE_WAIT_FOR_VALIDATE = 2;
+    // PAY_STATE_PAID = 3;
+    // PAY_STATE_INVALID = 4;
+    // PAY_STATE_CLOSED = 5;
+    required int32 pay_state = 9;
+    // 发货状态。
+    // POST_STATE_UNPOSTED = 1;
+    // POST_STATE_POSTED = 2;
+    optional int32 post_state = 10;
+    // 创建时间。
+    required int64 create_time = 11;
+    // 支付时间。
+    optional int64 pay_time = 12;
+    // 关闭时间。
+    optional int64 close_time = 13;
+}
+

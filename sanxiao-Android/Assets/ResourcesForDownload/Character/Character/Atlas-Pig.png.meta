@@ -1,0 +1,201 @@
+fileFormatVersion: 2
+guid: 5652a0a9ce06d5e4aa8facd801b08c15
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Atlas-Pig_0
+    21300002: Atlas-Pig_1
+    21300004: Atlas-Pig_2
+    21300006: Atlas-Pig_3
+    21300008: Atlas-Pig_4
+    21300010: Atlas-Pig_5
+    21300012: Atlas-Pig_6
+    21300014: Atlas-Pig_7
+    21300016: Atlas-Pig_8
+    21300018: Atlas-Pig_9
+    21300020: Atlas-Pig_10
+    21300022: Atlas-Pig_11
+    21300024: Atlas-Pig_12
+    21300026: Atlas-Pig_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Atlas-Pig_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 413
+        width: 146
+        height: 97
+      alignment: 9
+      pivot: {x: .540947676, y: .0401262119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_1
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 393
+        width: 160
+        height: 119
+      alignment: 9
+      pivot: {x: .567427158, y: .116520219}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_2
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 393
+        width: 160
+        height: 119
+      alignment: 9
+      pivot: {x: .558144391, y: .107306987}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_3
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 338
+        width: 44
+        height: 53
+      alignment: 9
+      pivot: {x: .238708496, y: .873105586}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_4
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 374
+        width: 92
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_5
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 368
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: .747624934, y: .6399616}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 343
+        width: 59
+        height: 48
+      alignment: 9
+      pivot: {x: .796190143, y: .758679092}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_7
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 320
+        width: 122
+        height: 83
+      alignment: 9
+      pivot: {x: .508892179, y: .0582209192}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_8
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 371
+        width: 28
+        height: 21
+      alignment: 9
+      pivot: {x: .517517626, y: .781996965}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_9
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 348
+        width: 28
+        height: 21
+      alignment: 9
+      pivot: {x: .517517626, y: .805354536}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_10
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 290
+        width: 32
+        height: 29
+      alignment: 9
+      pivot: {x: .744089603, y: .76933974}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_11
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 273
+        width: 56
+        height: 46
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_12
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 242
+        width: 27
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Atlas-Pig_13
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 243
+        width: 44
+        height: 43
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

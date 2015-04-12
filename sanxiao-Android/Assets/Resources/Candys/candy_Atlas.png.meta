@@ -1,0 +1,223 @@
+fileFormatVersion: 2
+guid: 54c54d1a82c308e42869303033cfa085
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: candy_Atlas_0
+    21300002: candy_Atlas_1
+    21300004: candy_Atlas_2
+    21300006: candy_Atlas_3
+    21300008: candy_Atlas_4
+    21300010: candy_Atlas_5
+    21300012: candy_Atlas_6
+    21300014: candy_Atlas_7
+    21300016: candy_Atlas_8
+    21300018: candy_Atlas_9
+    21300020: candy_Atlas_10
+    21300022: candy_Atlas_11
+    21300024: candy_Atlas_12
+    21300026: candy_Atlas_13
+    21300028: candy_Atlas_14
+    21300030: candy_Atlas_15
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: candy_Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 949
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 949
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 949
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 949
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 873
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 873
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 873
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 873
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 797
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 797
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 797
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 797
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 659
+        width: 52
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 734
+        width: 136
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 647
+        width: 137
+        height: 132
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: candy_Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 497
+        width: 148
+        height: 148
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
