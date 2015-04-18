@@ -112,12 +112,12 @@ public class MorlnUIButtonScale : MonoBehaviour
         get
         {
             if (!enabled) return false;
-            Collider col = collider;
+            Collider col = GetComponent<Collider>();
             return col && col.enabled;
         }
         set
         {
-            Collider col = collider;
+            Collider col = GetComponent<Collider>();
             if (col != null) col.enabled = value;
             enabled = value;
         }

@@ -38,7 +38,7 @@ namespace Assets.Scripts
         {
             var slashInd = path.LastIndexOf('/');
             if (slashInd >= 0) path = path.Substring(slashInd + 1);
-            if (DownloadAssetBundle != null) return DownloadAssetBundle.Load(path, typeof (T)) as T;
+            if (DownloadAssetBundle != null) return DownloadAssetBundle.LoadAsset(path, typeof (T)) as T;
             return null;
         }
 
@@ -46,7 +46,7 @@ namespace Assets.Scripts
         {
             var slashInd = path.LastIndexOf('/');
             if (slashInd >= 0) path = path.Substring(slashInd + 1);
-            if (DownloadAssetBundle != null) return DownloadAssetBundle.Load(path);
+            if (DownloadAssetBundle != null) return DownloadAssetBundle.LoadAsset(path);
             return null;
         }
 
@@ -54,7 +54,7 @@ namespace Assets.Scripts
         {
             var slashInd = path.LastIndexOf('/');
             if (slashInd >= 0) path = path.Substring(slashInd + 1);
-            if (DownloadAssetBundle != null) return DownloadAssetBundle.Load(path, systemTypeInstance);
+            if (DownloadAssetBundle != null) return DownloadAssetBundle.LoadAsset(path, systemTypeInstance);
             return null;
         }
     }

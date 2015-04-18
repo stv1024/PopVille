@@ -58,7 +58,7 @@ namespace Assets.Scripts
             {
                 if (onImageDownloaded != null)
                 {
-                    var bytes = File.ReadAllBytes(filePath);
+                    var bytes = new byte[1];// File.ReadAllBytes(filePath);
                     var texture = new Texture2D(1, 1);
                     texture.LoadImage(bytes);
                     onImageDownloaded(texture);
@@ -71,7 +71,7 @@ namespace Assets.Scripts
                 if (www.error == null)
                 {
                     Debug.Log("下载图片，大小(B):" + www.size);
-                    File.WriteAllBytes(filePath, www.bytes);
+                    //File.WriteAllBytes(filePath, www.bytes);
                     if (onImageDownloaded != null) onImageDownloaded(www.texture);
                 }
                 else
@@ -136,7 +136,7 @@ namespace Assets.Scripts
         {
             var dirInfo = new DirectoryInfo(CacheFolder);
             if (!dirInfo.Exists) return;//就不需要释放硬盘了
-            var fileInfos = dirInfo.GetFiles();
+            var fileInfos = new FileInfo[1];// dirInfo.GetFiles();
             foreach (var fileInfo in fileInfos)
             {
                 var nowTimeStamp = DateTime.Now.Ticks;
@@ -144,13 +144,13 @@ namespace Assets.Scripts
                 {
                     if (nowTimeStamp - ImageTimeStampDict[fileInfo.Name] > _maxCacheTimespanTicks)//文件很久没有用过了，就删除
                     {
-                        fileInfo.Delete();
+                        //fileInfo.Delete();
                         ImageTimeStampDict.Remove(fileInfo.Name);
                     }
                 }
                 else//没有记录的统统删除
                 {
-                    fileInfo.Delete();
+                    //fileInfo.Delete();
                 }
             }
         }

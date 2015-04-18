@@ -11,7 +11,7 @@ public class IndependentTouchReceiver : MonoBehaviour
 
     private void Update()
     {
-        if (!UICamera.currentCamera || !collider || !EventReceiver || string.IsNullOrEmpty(FunctionName)) return;
+        if (!UICamera.currentCamera || !GetComponent<Collider>() || !EventReceiver || string.IsNullOrEmpty(FunctionName)) return;
         Vector2 inPos;
         if (Input.GetMouseButton(0))
         {
@@ -29,7 +29,7 @@ public class IndependentTouchReceiver : MonoBehaviour
 
         var dist = UICamera.currentCamera.farClipPlane - UICamera.currentCamera.nearClipPlane;
         RaycastHit hit;
-        if (collider.Raycast(ray, out hit, dist) == SendWhenInside)
+        if (GetComponent<Collider>().Raycast(ray, out hit, dist) == SendWhenInside)
         {
             EventReceiver.SendMessage(FunctionName, SendMessageOptions.DontRequireReceiver);
         }

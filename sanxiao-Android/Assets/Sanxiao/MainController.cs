@@ -42,6 +42,17 @@ namespace Assets.Sanxiao
             SystemSettings.LoadSettingsFromHD();//从硬盘读取系统设置，如果没有会有默认值
 
             Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+            ConfigManager.SetConfig(ConfigManager.ConfigType.CharacterConfig, new CharacterConfig
+            {
+                CharacterList = new List<Communication.Proto.Character>{
+                    new Communication.Proto.Character(1, 0)
+                }
+            });
+
+            CommonData.MyCharacterList = new List<UserCharacter>{
+                new UserCharacter(1)
+            };
         }
         void OnDestroy()
         {
@@ -63,32 +74,11 @@ namespace Assets.Sanxiao
             //TODO：连接服务器
             //TODO：登录
 
-            switch (Application.internetReachability)
-            {
-                case NetworkReachability.NotReachable:
-                    //提示无网络
-                    AlertDialog.Load("您的网络没有连接上", "我去检查下", null);
-                    break;
-                case NetworkReachability.ReachableViaCarrierDataNetwork:
-
-                    break;
-                case NetworkReachability.ReachableViaLocalAreaNetwork:
-
-                    break;
-            }
-
             if (!ClientInfoHolder.Instance)
             {
                 Debug.LogError("没有ClientInfo Holder，必须检查");
                 return;
             }
-            //TODO:目前点按钮选服务器
-            UnityClient.Instance.InitAndConnect(ClientInfoHolder.Instance.IP, 61016,
-                                                Responder.Instance, NetworkManager.Instance);
-            //UnityClient.Instance.InitAndConnect("192.168.0.123", 61016, Responder.Instance, NetworkManager.Instance);
-
-            //TODO:请到NetworkManager.ConnectToServer上执行
-            //Requester.Request(new DeviceLogin{DeviceUid = DeviceUID, ClientInfo = new ClientInfo{ClientVersion = 1, SaleChannel = "inner"}});
 
             MainRoot.Goto(MainRoot.UIStateName.Entrance);
 
@@ -132,23 +122,6 @@ namespace Assets.Sanxiao
         private bool _inLoginProcess = true, _loginOk, _syncConfigOk, _downloadAssetBundleOk = false;
         void Update()
         {
-            #region 检测是否连上服务器&&资源同步完成
-
-            if (_inLoginProcess)
-            {
-                if (!_downloadAssetBundleOk && MorlnDownloadResources.DownloadAssetBundle)
-                {
-                    _downloadAssetBundleOk = true;
-                }
-                if (_loginOk && _syncConfigOk && _downloadAssetBundleOk)
-                {
-                    _inLoginProcess = false;
-                    if (EntranceUI.Instance != null) EntranceUI.Instance.DidLoginOk();
-                    else Debug.LogError("此时怎么能没有EntranceUI");
-                }
-            }
-
-            #endregion
 
             #region 检测爱心是否送达
             if (CommonData.HeartData.Count < CommonData.HeartData.MaxCount && Time.realtimeSinceStartup >= CommonData.HeartData.NextHeartRealTime)//当前数量未达到上限，并且达到了
@@ -515,7 +488,7 @@ namespace Assets.Sanxiao
         public void QuitPushLevelRoundGotoPushLevelUI()
         {
             State = new State.Shell();
-            MainRoot.Goto(MainRoot.UIStateName.PushLevel);
+            MainRoot.Goto(MainRoot.UIStateName.Entrance);
         }
         #endregion
 

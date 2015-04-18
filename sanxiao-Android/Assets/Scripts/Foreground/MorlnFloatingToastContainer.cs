@@ -23,7 +23,7 @@ public class MorlnFloatingToastContainer : MonoBehaviour
         mft.gameObject.SetActive(true);
         mft.SetText(text);
         _toast = mft.gameObject;
-        Destroy(_toast, _toast.animation.clip.length);
+        Destroy(_toast, _toast.GetComponent<Animation>().clip.length);
     }
 
     public static void Create(string text)

@@ -125,7 +125,7 @@ namespace Assets.Sanxiao.Game.Skill
             {
                 var go = PrefabHelper.InstantiateAndReset(IceBreakEffectPrefab, transform);
                 go.transform.localPosition = IceBricks[index].transform.localPosition;
-                Destroy(go, go.particleSystem.duration);
+                Destroy(go, go.GetComponent<ParticleSystem>().duration);
 
                 AudioManager.PlayOneShot(IceBreakAudio);//音效
                 GameManager.Instance.CellEffectContainer.CreateAddEnergyFloatingLabel(IceBricks[index].transform.localPosition, 10);//加蓄力值
@@ -139,7 +139,7 @@ namespace Assets.Sanxiao.Game.Skill
             {
                 var go = PrefabHelper.InstantiateAndReset(IceKnockEffectPrefab, transform); //播放小粒子，增强打击感
                 go.transform.localPosition = IceBricks[index].transform.localPosition;
-                Destroy(go, go.particleSystem.duration);
+                Destroy(go, go.GetComponent<ParticleSystem>().duration);
 
                 var curFrameNo = _timesKnocked[index]*SpriteIceBrickFrames.Length/TimesToBreak;
                 IceBricks[index].sprite = SpriteIceBrickFrames[curFrameNo];

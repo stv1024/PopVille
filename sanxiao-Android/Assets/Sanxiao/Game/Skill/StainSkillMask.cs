@@ -58,7 +58,7 @@ namespace Assets.Sanxiao.Game.Skill
                 }
             }
             _txrMask.Apply(false);
-            renderer.material.mainTexture = _txrMask;
+            GetComponent<Renderer>().material.mainTexture = _txrMask;
         }
 
         //public void ProcessTouch(params )
@@ -74,7 +74,7 @@ namespace Assets.Sanxiao.Game.Skill
             {
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hitInfo;
-                if (collider.Raycast(ray, out hitInfo, 1000))
+                if (GetComponent<Collider>().Raycast(ray, out hitInfo, 1000))
                 {
                     touching = true;
                     curUVTouPos = hitInfo.textureCoord;
@@ -84,7 +84,7 @@ namespace Assets.Sanxiao.Game.Skill
             {
                 var ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
                 RaycastHit hitInfo;
-                if (collider.Raycast(ray, out hitInfo, 1000))
+                if (GetComponent<Collider>().Raycast(ray, out hitInfo, 1000))
                 {
                     touching = true;
                     curUVTouPos = hitInfo.textureCoord;

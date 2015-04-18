@@ -36,8 +36,8 @@ namespace Assets.Sanxiao.UI.PushLevel
             TweenPosition.Begin(gameObject, 0.3f, panPosition);
             TweenScale.Begin(gameObject, 0.3f, new Vector3(ZoomInFactor, ZoomInFactor, 1));
 
-            PushLevelUI.Planet.collider.enabled = false;
-            collider.enabled = true;
+            PushLevelUI.Planet.GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().enabled = true;
             GetComponent<UIDragObject>().enabled = true;
 
             BtnReturn.isEnabled = true;
@@ -62,8 +62,8 @@ namespace Assets.Sanxiao.UI.PushLevel
             TweenPosition.Begin(gameObject, 0.3f, Vector3.zero);
             TweenScale.Begin(gameObject, 0.3f, Vector3.one);
 
-            PushLevelUI.Planet.collider.enabled = true;
-            collider.enabled = false;
+            PushLevelUI.Planet.GetComponent<Collider>().enabled = true;
+            GetComponent<Collider>().enabled = false;
             GetComponent<UIDragObject>().enabled = false;
 
             BtnReturn.isEnabled = false;

@@ -27,6 +27,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -279,8 +280,8 @@ MonoBehaviour:
     y: 874
     width: 224
     height: 74
-    borderLeft: 0
-    borderRight: 0
+    borderLeft: 35
+    borderRight: 35
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
@@ -497,4 +498,3 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100000}
   m_IsPrefabParent: 1
-  m_IsExploded: 1

@@ -76,7 +76,7 @@ class AssetBundleBuilder : EditorWindow
             case BuildTarget.Android:
                 platformNode = "Android";
                 break;
-            case BuildTarget.iPhone:
+            case BuildTarget.iOS:
                 platformNode =  "IOS";
                 break;
             default:
@@ -92,10 +92,10 @@ class AssetBundleBuilder : EditorWindow
                     BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.CompleteAssets,
                     BuildTarget.Android);
                 break;
-            case BuildTarget.iPhone:
+            case BuildTarget.iOS:
                 BuildPipeline.BuildAssetBundle(assets[0], assets, path,
                     BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.CompleteAssets,
-                    BuildTarget.iPhone);
+                    BuildTarget.iOS);
                 break;
             default:
                 BuildPipeline.BuildAssetBundle(assets[0], assets, path,

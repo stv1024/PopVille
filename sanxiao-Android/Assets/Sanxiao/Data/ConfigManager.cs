@@ -94,7 +94,7 @@ namespace Assets.Sanxiao.Data
                 {
                     try
                     {
-                        bytes = File.ReadAllBytes(path);
+                        //bytes = File.ReadAllBytes(path);
                     }
                     catch (Exception e)
                     {
@@ -479,7 +479,7 @@ namespace Assets.Sanxiao.Data
             var path = GetFilePath(configType);
             try
             {
-                File.WriteAllBytes(path, bytes);
+                //File.WriteAllBytes(path, bytes);
             }
             catch (Exception e)
             {

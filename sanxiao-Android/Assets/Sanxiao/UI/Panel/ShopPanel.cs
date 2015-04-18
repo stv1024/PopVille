@@ -93,9 +93,9 @@ namespace Assets.Sanxiao.UI.Panel
         public void RefreshToState(ShopState state)
         {
             _state = state;
-            BtnHeart.collider.enabled = (_state != ShopState.ExchangeHeart);
-            BtnCoin.collider.enabled = (_state != ShopState.ExchangeMoney10);
-            BtnDiamond.collider.enabled = (_state != ShopState.Recharge);
+            BtnHeart.GetComponent<Collider>().enabled = (_state != ShopState.ExchangeHeart);
+            BtnCoin.GetComponent<Collider>().enabled = (_state != ShopState.ExchangeMoney10);
+            BtnDiamond.GetComponent<Collider>().enabled = (_state != ShopState.Recharge);
 
             SprHeart.enabled = (_state == ShopState.ExchangeHeart);
             SprCoin.enabled = (_state == ShopState.ExchangeMoney10);

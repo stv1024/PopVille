@@ -25,14 +25,14 @@ public class MusicManager : MonoBehaviour
             if (!Instance) return;
             if (!SystemSettings.MusicOn)
             {
-                Instance.audio.enabled = false;
+                Instance.GetComponent<AudioSource>().enabled = false;
             }
             else
             {
-                if (!Instance.audio.enabled)
+                if (!Instance.GetComponent<AudioSource>().enabled)
                 {
-                    Instance.audio.enabled = true;
-                    Instance.audio.volume = 1;
+                    Instance.GetComponent<AudioSource>().enabled = true;
+                    Instance.GetComponent<AudioSource>().volume = 1;
                 }
             }
         }
@@ -44,30 +44,30 @@ public class MusicManager : MonoBehaviour
     {
         if (!MusicOn)
         {
-            if (audio.enabled)
+            if (GetComponent<AudioSource>().enabled)
             {
-                audio.enabled = false;
+                GetComponent<AudioSource>().enabled = false;
             }
             return;
         }
-        if (audio.enabled && audio.volume >= 1) return;//不重复淡入
+        if (GetComponent<AudioSource>().enabled && GetComponent<AudioSource>().volume >= 1) return;//不重复淡入
         StartCoroutine(_CrossFadeIn());
     }
     IEnumerator _CrossFadeIn()
     {
-        if (!audio.enabled)
+        if (!GetComponent<AudioSource>().enabled)
         {
-            audio.volume = 0;
-            audio.enabled = true;
+            GetComponent<AudioSource>().volume = 0;
+            GetComponent<AudioSource>().enabled = true;
         }
 
         const float speed = 1/DurationFrom0ToMax;
         while (true)
         {
-            audio.volume += speed*Time.deltaTime;
-            if (audio.volume >= 1)
+            GetComponent<AudioSource>().volume += speed*Time.deltaTime;
+            if (GetComponent<AudioSource>().volume >= 1)
             {
-                audio.volume = 1;
+                GetComponent<AudioSource>().volume = 1;
                 yield break;
             }
             yield return new WaitForEndOfFrame();
@@ -77,16 +77,16 @@ public class MusicManager : MonoBehaviour
     {
         if (!MusicOn)
         {
-            if (audio.enabled)
+            if (GetComponent<AudioSource>().enabled)
             {
-                audio.enabled = false;
+                GetComponent<AudioSource>().enabled = false;
             }
             return;
         }
-        if (!audio.enabled) return;//不重复淡出
-        if (audio.volume <= 0.01f)
+        if (!GetComponent<AudioSource>().enabled) return;//不重复淡出
+        if (GetComponent<AudioSource>().volume <= 0.01f)
         {
-            audio.enabled = false;
+            GetComponent<AudioSource>().enabled = false;
             return;
         }
         StartCoroutine(_CrossFadeOut());
@@ -97,10 +97,10 @@ public class MusicManager : MonoBehaviour
         const float speed = 1 / DurationFrom0ToMax;
         while (true)
         {
-            audio.volume -= speed * Time.deltaTime;
-            if (audio.volume <= 0)
+            GetComponent<AudioSource>().volume -= speed * Time.deltaTime;
+            if (GetComponent<AudioSource>().volume <= 0)
             {
-                audio.enabled = false;
+                GetComponent<AudioSource>().enabled = false;
                 yield break;
             }
             yield return new WaitForEndOfFrame();

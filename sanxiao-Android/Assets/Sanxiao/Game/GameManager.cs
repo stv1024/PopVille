@@ -333,130 +333,7 @@ namespace Assets.Sanxiao.Game
                 Debug.LogError("怎能没有CharacterConfig");
                 return;
             }
-            var equipConfig = ConfigManager.GetConfig(ConfigManager.ConfigType.EquipConfig) as EquipConfig;
-            if (equipConfig == null)
-            {
-                Debug.LogError("怎能没有EquipConfig");
-                return;
-            }
 
-            #region 数值
-
-            for (int i = 0; i < GameData.TeamMaxNumber; i++)
-            {
-                var hasOne = true;
-                if (i == 0)
-                {
-                    GameData.OurRoundInitHealthList[i] = CommonData.MyUser.RoundInitHealth;
-                    GameData.MyEnergyCapacity = CommonData.MyUser.EnergyCapacity;
-                    _ourUserCharacterList[i] =
-                        CommonData.MyCharacterList.Find(x => x.CharacterCode == CommonData.MyUser.CharacterCode);
-                    _ourConfigCharacterList[i] =
-                        characterConfig.CharacterList.Find(x => x.CharacterCode == CommonData.MyUser.CharacterCode);
-
-                    GameData.OurHealthList[i] = CommonData.MyUser.RoundInitHealth;
-                }
-                else if (GameData.FriendDataList != null && i - 1 < GameData.FriendDataList.Count)
-                {
-                    GameData.OurRoundInitHealthList[i] = GameData.FriendDataList[i - 1].RoundInitHealth;
-                    _ourUserCharacterList[i] = new UserCharacter(GameData.FriendDataList[i - 1].Character);
-                    _ourConfigCharacterList[i] =
-                        characterConfig.CharacterList.Find(
-                            x => x.CharacterCode == GameData.FriendDataList[i - 1].Character);
-                    GameData.OurHealthList[i] = GameData.FriendDataList[i - 1].RoundInitHealth;
-                }
-                else
-                {
-                    hasOne = false;
-                }
-                if (hasOne)
-                {
-                    if (_ourConfigCharacterList[i] == null) //出错了也能运行
-                    {
-                        if (GameData.FriendDataList != null)
-                        {
-                            Debug.LogError("找不到CharacterConfig:code:" + GameData.FriendDataList[i - 1].Character);
-                        }
-                        else
-                        {
-                            Debug.LogError("找不到CharacterConfig，同时GameData.FriendDataList还 == null");
-                        }
-                        _ourConfigCharacterList[i] =
-                            new Communication.Proto.Character(_ourUserCharacterList[i].CharacterCode, 999);
-                    }
-
-                    GameData.OurEnergyList[i] = _ourConfigCharacterList[i].InitEnergy;
-
-                    GameData.OurAttackAddList[i] = 0;
-                    GameData.OurCriticalStrikeRateList[i] = 0;
-                    GameData.OurDodgeRateList[i] = 0;
-                    foreach (var equip in _ourUserCharacterList[i].WearEquipList.Select(equipCode => equipConfig.EquipList.Find(x => x.EquipCode == equipCode))
-                                                                          .Where(equip => equip != null))
-                    {
-                        GameData.OurHealthList[i] += (int) equip.HealthAdd;
-                        GameData.OurAttackAddList[i] += (int) equip.AttackAdd;
-                        GameData.OurCriticalStrikeRateList[i] += equip.CriticalStrikeRate;
-                        GameData.OurDodgeRateList[i] += equip.DodgeRate;
-                    }
-
-                    OurCharacterList[OurLogic2CharacterIndex[i]].CharacterCode =
-                        _ourConfigCharacterList[i].CharacterCode;
-                }
-            }
-            for (int i = 0; i < GameData.TeamMaxNumber; i++)
-            {
-                var hasOne = true;
-                if (i == 0)
-                {
-                    GameData.RivalRoundInitHealthList[i] = GameData.RivalBossData.RoundInitHealth;
-                    _rivalUserCharacterList[i] = new UserCharacter(GameData.RivalBossData.Character);
-                    GameData.RivalHealthList[i] = GameData.RivalBossData.RoundInitHealth;
-                    _rivalConfigCharacterList[i] =
-                        characterConfig.CharacterList.Find(
-                            x => x.CharacterCode == GameData.RivalBossData.Character);
-                }
-                else if (GameData.FellowDataList != null && i - 1 < GameData.FellowDataList.Count)
-                {
-                    GameData.RivalRoundInitHealthList[i] = GameData.FellowDataList[i - 1].RoundInitHealth;
-                    _rivalUserCharacterList[i] = new UserCharacter(GameData.FellowDataList[i - 1].Character);
-                    GameData.RivalHealthList[i] = GameData.FellowDataList[i - 1].RoundInitHealth;
-                    _rivalConfigCharacterList[i] =
-                        characterConfig.CharacterList.Find(
-                            x => x.CharacterCode == GameData.FellowDataList[i - 1].Character);
-                }
-                else
-                {
-                    hasOne = false;
-                }
-                if (hasOne)
-                {
-                    if (_rivalConfigCharacterList[i] == null) //出错了也能运行
-                    {
-                        Debug.LogError("找不到CharacterConfig:code:" + _rivalUserCharacterList[i].CharacterCode);
-                        _rivalConfigCharacterList[i] =
-                            new Communication.Proto.Character(_rivalUserCharacterList[i].CharacterCode, 999);
-                    }
-
-                    GameData.RivalAttackAddList[i] = 0;
-                    GameData.RivalCriticalStrikeRateList[i] = 0;
-                    GameData.RivalDodgeRateList[i] = 0;
-                    foreach (var equip in _rivalUserCharacterList[i].WearEquipList.Select(equipCode => equipConfig.EquipList.Find(x => x.EquipCode == equipCode))
-                                                                            .Where(equip => equip != null))
-                    {
-                        GameData.RivalHealthList[i] += (int) equip.HealthAdd;
-                        GameData.RivalAttackAddList[i] += (int) equip.AttackAdd;
-                        GameData.RivalCriticalStrikeRateList[i] += equip.CriticalStrikeRate;
-                        GameData.RivalDodgeRateList[i] += equip.DodgeRate;
-                    }
-
-                    RivalCharacterList[RivalLogic2CharacterIndex[i]].CharacterCode =
-                        _rivalConfigCharacterList[i].CharacterCode;
-                }
-            }
-
-            #endregion
-
-            ResetVegetableData();
 
             #endregion
 
@@ -471,7 +348,7 @@ namespace Assets.Sanxiao.Game
                     OurCharacterList[OurLogic2CharacterIndex[i]].Refresh(i == 0 ? 0.7f : 0.5f);
                 }
             }
-            OurCharacterList[OurLogic2CharacterIndex[0]].WearEquip(CommonData.CurUserCharacter.WearEquipList);
+
             for (int i = 0; i < RivalCharacterList.Length; i++)
             {
                 if (_rivalUserCharacterList[i] == null)
@@ -483,7 +360,6 @@ namespace Assets.Sanxiao.Game
                     RivalCharacterList[RivalLogic2CharacterIndex[i]].Refresh(i == 0 ? 0.7f : 0.5f);
                 }
             }
-            RivalCharacterList[RivalLogic2CharacterIndex[0]].WearEquip(GameData.RivalBossData.WearEquipList);
 
             GameUI.LblTimer.text = "准备";
             StateFlag.ShowReady();
@@ -500,26 +376,6 @@ namespace Assets.Sanxiao.Game
             OpponentState = OpponentStateEnum.RemoteChallenge;
             MyGrid.StartRound();
 
-            //方案1：3个角色一起攻击
-            var defenser = DefenserHolder.AddComponent<Defenser>();//只有Boss有DefenseData
-            DefenserList.Add(defenser);
-            defenser.StartPlaying(this, true, 0, GameData.RivalBossData);
-
-            //方案2：每个角色自行攻击
-            //for (int i = 0; i < GameData.FriendDefenseDataList.Count; i++)
-            //{
-            //    var defenseData = GameData.FriendDefenseDataList[i];
-            //    var defenser = DefenserHolder.AddComponent<Defenser>();
-            //    DefenserList.Add(defenser);
-            //    defenser.StartPlaying(this, false, i + 1, defenseData);
-            //}
-            //for (int i = 0; i < GameData.RivalDefenseDataList.Count; i++)
-            //{
-            //    var defenseData = GameData.RivalDefenseDataList[i];
-            //    var defenser = DefenserHolder.AddComponent<Defenser>();
-            //    DefenserList.Add(defenser);
-            //    defenser.StartPlaying(this, true, i, defenseData);
-            //}
 
             GameData.StartRoundTime = Time.time;
 
@@ -867,7 +723,7 @@ namespace Assets.Sanxiao.Game
 
                 if (GameData.MyEnergy >= GameData.MyEnergyCapacity && !_isLettingPlayerUseSkill)
                 {
-                    LetPlayerUseSkill();
+                    //LetPlayerUseSkill();
                 }
 
                 if (GameData.MyEnergy > GameData.MyEnergyCapacity) //不能超过上限
@@ -1756,14 +1612,8 @@ namespace Assets.Sanxiao.Game
         public void Quit()
         {
             Time.timeScale = 1;
-            if (OpponentState == OpponentStateEnum.RemoteChallenge)
-            {
-                MainController.Instance.QuitPushLevelRoundGotoPushLevelUI();
-            }
-            else
-            {
-                MainController.Instance.GiveUpRealPersonRound();
-            }
+            MainController.Instance.QuitPushLevelRoundGotoPushLevelUI();
+            
         }
         #endregion
 

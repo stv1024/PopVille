@@ -34,7 +34,7 @@ namespace Assets.Sanxiao.Game
             IsRival = isRival;
             Index = index;
             _defenseData = defenseData;
-            if (_defenseData.SkillEventList.Count > 0) StartCoroutine(PlayingChallenge());
+            StartCoroutine(PlayingChallenge());
         }
 
         private IEnumerator PlayingChallenge()

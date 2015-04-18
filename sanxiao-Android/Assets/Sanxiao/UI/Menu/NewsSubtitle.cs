@@ -48,9 +48,9 @@ namespace Assets.Sanxiao.UI.Menu
                     continue;
                 }
                 LblHtml.gameObject.SetActive(true);
-                LblHtml.animation.Rewind();
-                LblHtml.animation.Play();
-                yield return new WaitForSeconds(LblHtml.animation.clip.length);
+                LblHtml.GetComponent<Animation>().Rewind();
+                LblHtml.GetComponent<Animation>().Play();
+                yield return new WaitForSeconds(LblHtml.GetComponent<Animation>().clip.length);
                 i++;
             }
         }

@@ -324,7 +324,7 @@ public class UICamera : MonoBehaviour
 	/// Caching is always preferable for performance.
 	/// </summary>
 
-	public Camera cachedCamera { get { if (mCam == null) mCam = camera; return mCam; } }
+	public Camera cachedCamera { get { if (mCam == null) mCam = GetComponent<Camera>(); return mCam; } }
 
 	/// <summary>
 	/// Set to 'true' just before OnDrag-related events are sent (this includes OnPress events that resulted from dragging).
@@ -774,7 +774,7 @@ public class UICamera : MonoBehaviour
 			Application.platform == RuntimePlatform.IPhonePlayer
 #if !UNITY_3_5 && !UNITY_4_0 && !UNITY_4_1
 			|| Application.platform == RuntimePlatform.WP8Player
-			|| Application.platform == RuntimePlatform.BB10Player
+			|| Application.platform == RuntimePlatform.BlackBerryPlayer
 #endif
 			)
 		{

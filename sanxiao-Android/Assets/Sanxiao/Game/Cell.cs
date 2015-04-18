@@ -75,15 +75,15 @@ namespace Assets.Sanxiao.Game
                 case State.Null:
                     break;
                 case State.Normal:
-                    Spr.renderer.enabled = false;
+                    Spr.GetComponent<Renderer>().enabled = false;
                     break;
                 case State.Lock:
                     Spr.sprite = SpriteLock;
-                    Spr.renderer.enabled = true;
+                    Spr.GetComponent<Renderer>().enabled = true;
                     break;
                 case State.Brick:
                     Spr.sprite = SpriteBrick;
-                    Spr.renderer.enabled = true;
+                    Spr.GetComponent<Renderer>().enabled = true;
                     break;
             }
             _lastState = MyState;

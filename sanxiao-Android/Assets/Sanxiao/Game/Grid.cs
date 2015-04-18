@@ -1546,7 +1546,7 @@ namespace Assets.Sanxiao.Game
                 {
                     var ray = ControlCamera.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hitInfo;
-                    if (collider.Raycast(ray, out hitInfo, 2000))
+                    if (GetComponent<Collider>().Raycast(ray, out hitInfo, 2000))
                     {
                         curLocalTouPos = transform.InverseTransformPoint(hitInfo.point).ToVector2();
                         if (GameManager.SkillMaskContainer.CanTouchThroughAllMasks(curLocalTouPos))
@@ -1559,7 +1559,7 @@ namespace Assets.Sanxiao.Game
                 {
                     var ray = ControlCamera.ScreenPointToRay(Input.touches[0].position);
                     RaycastHit hitInfo;
-                    if (collider.Raycast(ray, out hitInfo, 2000))
+                    if (GetComponent<Collider>().Raycast(ray, out hitInfo, 2000))
                     {
                         curLocalTouPos = transform.InverseTransformPoint(hitInfo.point).ToVector2();
                         if (GameManager.SkillMaskContainer.CanTouchThroughAllMasks(curLocalTouPos))

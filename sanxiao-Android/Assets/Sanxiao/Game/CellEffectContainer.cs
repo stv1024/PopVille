@@ -37,7 +37,7 @@ namespace Assets.Sanxiao.Game
             ps.ResetTransform(transform);
             ps.transform.localPosition = GameManager.Instance.MyGrid.GetCellPosition(ij);
 
-            ps.particleSystem.Play();
+            ps.GetComponent<ParticleSystem>().Play();
             PopParticleSysPool.Enqueue(ps.gameObject, 5);
         }
 

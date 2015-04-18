@@ -89,15 +89,12 @@ namespace Assets.Sanxiao.UI
 
         private void OnEnterGameClick()
         {
-            if (CommonData.FirstTimeGuide)//进入新手教程状态
+            //MainRoot.Goto(MainRoot.UIStateName.Menu);
+            MainRoot.Goto(MainRoot.UIStateName.Game);
+            MainController.Instance.Execute(new Communication.UpperPart.StartChallenge
             {
-                FreshmanGuide.StartGuide();
-                CommonData.FirstTimeGuide = false;
-            }
-            else
-            {
-                MainRoot.Goto(MainRoot.UIStateName.Menu);
-            }
+                RoundTimeout = 999,
+            });
         }
 
         void OnOutLinkClick()

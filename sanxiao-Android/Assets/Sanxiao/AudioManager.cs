@@ -24,12 +24,12 @@ public class AudioManager : MonoBehaviour
             if (!Instance) return;
             if (!SystemSettings.AudioOn)
             {
-                Instance.audio.enabled = false;
+                Instance.GetComponent<AudioSource>().enabled = false;
             }
             else
             {
-                if (!Instance.audio.enabled) Instance.audio.enabled = true;
-                Instance.audio.volume = 1;
+                if (!Instance.GetComponent<AudioSource>().enabled) Instance.GetComponent<AudioSource>().enabled = true;
+                Instance.GetComponent<AudioSource>().volume = 1;
             }
         }
     }
@@ -37,7 +37,7 @@ public class AudioManager : MonoBehaviour
     public static void PlayOneShot(AudioClip clip, float volumeScale = 1)
     {
         if (!Instance || !clip || !AudioOn || volumeScale <= 0) return;
-        Instance.audio.PlayOneShot(clip, volumeScale);
+        Instance.GetComponent<AudioSource>().PlayOneShot(clip, volumeScale);
     }
     /// <summary>
     /// 随机播放一个音效
@@ -47,6 +47,6 @@ public class AudioManager : MonoBehaviour
     public static void PlayRandomOneShot(float volumeScale = 1,params AudioClip[] clips)
     {
         if (!Instance || clips == null || !AudioOn || volumeScale <= 0 || clips.Length == 0) return;
-        Instance.audio.PlayOneShot(clips[Random.Range(0, clips.Length)], volumeScale);
+        Instance.GetComponent<AudioSource>().PlayOneShot(clips[Random.Range(0, clips.Length)], volumeScale);
     }
 }
