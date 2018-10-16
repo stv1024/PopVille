@@ -118,7 +118,7 @@ class AssetBundleBuilder : EditorWindow
     [MenuItem("My Menu/Clear Cache")]
     static void CleanCache()
     {
-        Caching.CleanCache();
+        Caching.ClearCache();
     }
 
     [MenuItem("My Menu/Unload Unused Assets")]

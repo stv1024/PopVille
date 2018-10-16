@@ -2,6 +2,7 @@
 using Assets.Sanxiao.Game;
 using Fairwood.Math;
 using UnityEngine;
+using Grid = Assets.Sanxiao.Game.Grid;
 
 namespace Assets.Sanxiao.AI
 {
@@ -9,7 +10,7 @@ namespace Assets.Sanxiao.AI
     {
         //Grid _grid;
 
-        public SanxiaoAI(Grid grid)
+        public SanxiaoAI(Game.Grid grid)
         {
             if (grid == null) Debug.LogError("grid == null Error! SanxiaoAI must have grid.");
             //_grid = grid;
@@ -32,7 +33,7 @@ namespace Assets.Sanxiao.AI
         /// <param name="grid"></param>
         /// <param name="onlyFirstOne"></param>
         /// <returns></returns>
-        public List<CandyExchange> GetAllHintExchanges(Grid grid, bool onlyFirstOne = false)
+        public List<CandyExchange> GetAllHintExchanges(Game.Grid grid, bool onlyFirstOne = false)
         {
             _exchangeList.Clear();
 

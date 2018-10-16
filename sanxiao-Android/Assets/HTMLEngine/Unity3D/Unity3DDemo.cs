@@ -265,7 +265,7 @@ And drawing time of this text:<br><font color=yellow><code>{2:F4} ms</code></fon
         }
 
         // catch mouseUp to detect links
-        if (Event.current.type == EventType.mouseUp)
+        if (Event.current.type == EventType.MouseUp)
         {
             // remember we have offset of html container (x,y)
             currentLink = this.compiler.GetLink((int) Event.current.mousePosition.x-x,(int) Event.current.mousePosition.y-y);
